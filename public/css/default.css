@@ -1,0 +1,93 @@
+/* 
+* PROJETO DO SISTEMA EASY MANAGER 
+* Desenvolvimento: ©EASY MANAGER  - Consultoria e Desenvolvimento de Sistemas.
+*  */
+/* 
+*   Created on : 27/11/2014, 21:18:54
+*   
+*/
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+    vertical-align:baseline;
+}
+html , body {height:100%; background: #e7e7e8; font-family: "Arial";}
+.page{
+    min-height:100%;
+    position:relative;
+}
+
+.conteudo{
+    background: rgb(78,78,80); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(78,78,80,1) 0%, rgba(163,163,163,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(78,78,80,1)), color-stop(100%,rgba(163,163,163,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(78,78,80,1) 0%,rgba(163,163,163,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(78,78,80,1) 0%,rgba(163,163,163,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(78,78,80,1) 0%,rgba(163,163,163,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(78,78,80,1) 0%,rgba(163,163,163,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4e4e50', endColorstr='#a3a3a3',GradientType=0 ); /* IE6-9 */
+    height: 550px;
+    width: 100%;
+    float: left;
+}
+.barra{
+    box-shadow: 0px 0 15px 10px #e7e7e8;
+}
+.geral_form{
+    margin: 100px auto;
+    width: 550px;
+    height: 220px;
+}
+.logo_form{
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 140px;
+    height: 140px;
+}
+.form{
+    margin-top: 20px;
+    margin-right: 10px;
+    float: right;
+    width: 360px;
+    height: 130px;
+    background: #FFF;
+    border-radius: 3px;
+}
+.input{
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    width: 200px;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.form table{
+    margin-top: 15px;
+}
+.txtAcesso{
+    margin-left: 5px;
+    margin-top: 3px;
+    border-radius: 3px;
+    padding: 3px;
+    background: #404041;
+    color: #FFF;
+    font-weight: bold;
+}
+#empresa{
+    text-align:center;
+}
+.btnLogin{
+   padding: 5px;
+   background: #404041;
+   color: #FFF;
+   font-weight: bold;
+   margin-left: 80px;
+   margin-top: 10px;
+}
+.btnSenha{
+    color: #FFF;
+    margin-left: 50px;
+    font-size: 12px;
+}
+

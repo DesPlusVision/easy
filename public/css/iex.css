@@ -1,0 +1,19 @@
+/* 
+* PROJETO DO SISTEMA EASY MANAGER 
+* Desenvolvimento: ©PLUSVISION - Consultoria e Desenvolvimento de Sistemas.
+*  */
+/* 
+*   Created on : 27/11/2014, 21:18:54
+*   Author     : Blendo Santos - blendo@outlook.com
+*/
+#header {
+    background: #000;
+    //background: url(../img/pattern.png) fixed, url(../img/header_preto.jpg) no-repeat;
+    -moz-background-size: auto, cover; /* Firefox 3.6 */  
+    background-size: auto, cover; /* Chrome, Firefox 4.0+, Safari 4.1+, Opera 10+ and IE9 */
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/header_preto.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/header_preto.jpg', sizingMethod='scale')";
+    overflow-y: hidden;
+    height: 120px;
+    position:relative;
+}
