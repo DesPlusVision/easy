@@ -45,6 +45,10 @@
 #link-href{
     color: #969697
 }
+#msgErro{
+    color: red;
+    font-weight: bold;
+}
 
 body {
   line-height: 1;

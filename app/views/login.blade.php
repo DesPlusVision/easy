@@ -50,9 +50,10 @@
                     <p class="login-submit">
                         <button type="submit" class="login-button">Login</button>
                     </p>
-                    <p class="forgot-password"><input type="checkbox" id="checkAdmin" onclick="habilitar()">Administrador?</p>
+                    <p class="forgot-password"><input type="checkbox" id="checkAdmin" name="checkAdmin" value="true" onclick="habilitar()">Administrador?</p>
                     <p class="forgot-password"><a href="#">Esqueceu a senha?</a></p>
                 </form>
+                <div id="msgErro">{{ isset($msg) ? $msg : ''}}</div>
             </div>
         </div>
     </body>

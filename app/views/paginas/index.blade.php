@@ -1,0 +1,2 @@
+
+Logado Usuario comun

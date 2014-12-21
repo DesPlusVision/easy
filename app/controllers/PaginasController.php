@@ -9,9 +9,13 @@
 class PaginasController extends BaseController{
     protected $layout = "layouts.main";
 
-
+    public function index(){
+        $this->layout->titulo = "Easy";
+        $this->layout->pagina = "paginas.index";
+    }
+    
     public function equipamentos(){
         $this->layout->titulo = "Easy | Equipamentos";
-        $this->layout->pagina = "paginas.equipamentos";
+        $this->layout->pagina = "paginas.cadastro.equipamentos";
     }
 }
