@@ -28,8 +28,9 @@
 
             <!-- Formulario Centralizado -->
             <div class="welcome">
+                <div id="msgErro">{{ isset($msg) ? $msg : ''}}</div>
                 <form method="POST"  class="login">
-
+                    
                     <p>
                         <label for="txtLogin">Login:</label>
                         <input type="text" name="txtLogin" id="login" >
@@ -53,7 +54,7 @@
                     <p class="forgot-password"><input type="checkbox" id="checkAdmin" name="checkAdmin" value="true" onclick="habilitar()">Administrador?</p>
                     <p class="forgot-password"><a href="#">Esqueceu a senha?</a></p>
                 </form>
-                <div id="msgErro">{{ isset($msg) ? $msg : ''}}</div>
+                
             </div>
         </div>
     </body>
