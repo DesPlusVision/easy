@@ -44,6 +44,6 @@ class UsuarioController extends BaseController {
         }
         
         
-        return View::make('login')->with('msg', 'Erro ao efetuar login!');
+        return Redirect::to('/')->with('msg', 'Erro ao efetuar login');
     }
 }

@@ -28,7 +28,9 @@
 
             <!-- Formulario Centralizado -->
             <div class="welcome">
-                <div id="msgErro">{{ isset($msg) ? $msg : ''}}</div>
+                <div id="msgErro">{{ isset($msg) ? $msg : ''}}
+                {{Session::get('msg')}}
+                </div>
                 <form method="POST"  class="login">
 
                     <p>
@@ -54,7 +56,7 @@
                     <p class="forgot-password"><a href="#">Esqueceu a senha?</a></p>
                     {{ Form::close() }}
                 </form>
-
+                {{Session::get('msg')}}
             </div>
         </div>
     </body>
