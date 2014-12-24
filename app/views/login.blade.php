@@ -43,9 +43,7 @@
 
                     <p>
                         <label for="empresa">Empresa:</label>
-                        <select name="slcEmpresa" id="slcEmpresa">
-                            <option value="">:: SELECIONE ::</option>
-                        </select>
+                        {{ Form::select('slcEmpresa', $slcEmpresa, Input::old('id')) }}
                     </p>
 
                     <p class="login-submit">
