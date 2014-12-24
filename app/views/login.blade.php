@@ -30,7 +30,7 @@
             <div class="welcome">
                 <div id="msgErro">{{ isset($msg) ? $msg : ''}}</div>
                 <form method="POST"  class="login">
-                    
+
                     <p>
                         <label for="txtLogin">Login:</label>
                         <input type="text" name="txtLogin" id="login" >
@@ -43,7 +43,8 @@
 
                     <p>
                         <label for="empresa">Empresa:</label>
-                        <?php print_r($slcEmpresa[3]); ?>
+                        {{ Form::open(array('action' => 'EmpresaController@getEmpresasLogin')) }}
+                        {{ Form::select('slcEmpresa', $slcEmpresa, Input::old('slcEmpresa')) }}
                     </p>
 
                     <p class="login-submit">
@@ -51,8 +52,9 @@
                     </p>
                     <p class="forgot-password"><input type="checkbox" id="checkAdmin" name="checkAdmin" value="true" onclick="habilitar()">Administrador?</p>
                     <p class="forgot-password"><a href="#">Esqueceu a senha?</a></p>
+                    {{ Form::close() }}
                 </form>
-                
+
             </div>
         </div>
     </body>

@@ -11,7 +11,7 @@ class EmpresaController extends BaseController {
         /* SELECT NA TABELA EMRPESAS QUE IRAR LISTAR AS COLUNAS 'nm_empresa' e 'id' */
         $slcEmpresa = DB::table('empresas')->lists('nm_empresa', 'id');
         /* RETORNANDO O ARRAY DAS COLUNAS LISTADAS EM COMPACTAS NA VARIAVEL 'slcEmpresa' */
-        return View::make('login')->with('slcEmpresa', $slcEmpresa);
+        return View::make('login')->with('slcEmpresa', $slcEmpresa);;
     }
     
     
