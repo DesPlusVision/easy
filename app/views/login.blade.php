@@ -43,7 +43,7 @@
 
                     <p>
                         <label for="empresa">Empresa:</label>
-                        {{ Form::select('slcEmpresa', $slcEmpresa, Input::old('id')) }}
+                        {{ Form::select('slcEmpresa', $slcEmpresa, Input::old('id'), array('id' => 'slcEmpresa')) }}
                     </p>
 
                     <p class="login-submit">
