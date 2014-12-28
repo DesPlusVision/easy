@@ -9,13 +9,15 @@
 class PaginasController extends BaseController{
     protected $layout = "layouts.main";
 
-    public function index(){
-        $this->layout->titulo = "Easy";
-        $this->layout->pagina = "paginas.index";
+    public function indexAdmin(){
+        $this->layout->titulo = "Easy Manager | Administrador";
+        $this->layout->pagina = "admin.index";
     }
     
-    public function equipamentos(){
-        $this->layout->titulo = "Easy | Equipamentos";
-        $this->layout->pagina = "paginas.cadastro.equipamentos";
+    public function Empresas(){
+        $this->layout->titulo = "Easy | Empresas";
+        $this->layout->pagina = "admin.cadastro.empresas";
+        $this->layout->estado = EstadoController::getEstados();
+        $this->layout->empresas = EmpresaController::getEmpresas();
     }
 }

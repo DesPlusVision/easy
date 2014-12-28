@@ -22,8 +22,8 @@ class UsuarioController extends BaseController {
         if ($admin == '') {
             foreach ($usuarios->getUsuarios() as $usuario) {
                 if ($usuario->login == $login && $usuario->senha == md5($senha) && $usuario->idEmpresa == $empresa && $usuario->idAcesso == 2) {
-                    if ($usuario->status == "ATIVO") {
-                        return Redirect::to('logado/index');
+                    if ($usuario->idStatus == "1") {
+                        return Redirect::to('logado');
                     } else {
                         return View::make('login')->with('msg', 'Seu perfil não está ativo!');
                     }
@@ -34,8 +34,8 @@ class UsuarioController extends BaseController {
         } else {
             foreach ($usuarios->getUsuarios() as $usuario) {
                 if ($usuario->login == $login && $usuario->senha == md5($senha) && $usuario->idAcesso == 1) {
-                    if ($usuario->status == "ATIVO") {
-                        return Redirect::to('logado/admin/index');
+                    if ($usuario->idStatus == "1") {
+                        return Redirect::to('admin')->with('usuarioLogado', $usuario->login);
                     } else {
                         return View::make('login')->with('msg', 'Seu perfil não está ativo!');
                     }

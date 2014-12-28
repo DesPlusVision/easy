@@ -38,8 +38,8 @@ return array(
 	| ahead and set this to a sensible default for you out of the box.
 	|
 	*/
-
-	'timezone' => 'UTC',
+        
+	'timezone' => 'America/Bahia',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return array(
 	|
 	*/
 
-	'locale' => 'en',
+	'locale' => 'pt',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -65,7 +65,7 @@ return array(
 	|
 	*/
 
-	'fallback_locale' => 'en',
+	'fallback_locale' => 'pt',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -94,7 +94,7 @@ return array(
 	*/
 
 	'providers' => array(
-
+                
 		'Illuminate\Foundation\Providers\ArtisanServiceProvider',
 		'Illuminate\Auth\AuthServiceProvider',
 		'Illuminate\Cache\CacheServiceProvider',
@@ -121,6 +121,9 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+            
+                /* NOVAS */
+                'Thujohn\Pdf\PdfServiceProvider', /* PDF */
 
 	),
 
@@ -188,6 +191,9 @@ return array(
 		'URL'               => 'Illuminate\Support\Facades\URL',
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
+            
+                /* NOVAS */
+                'PDF' => 'Thujohn\Pdf\PdfFacade', /* PDF */
 
 	),
 

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
         <meta charset="UTF-8">
         <title>Easy Manager</title>
         {{ HTML::style('css/padrao.css') }}
@@ -28,8 +29,9 @@
 
             <!-- Formulario Centralizado -->
             <div class="welcome">
-                <div id="msgErro">{{ isset($msg) ? $msg : ''}}
-                {{Session::get('msg')}}
+                <div id="msgErro">
+                    {{ isset($msg) ? $msg : ''}}
+                    {{Session::get('msg')}}
                 </div>
                 <form method="POST"  class="login">
 
@@ -45,18 +47,15 @@
 
                     <p>
                         <label for="empresa">Empresa:</label>
-                        {{ Form::open(array('action' => 'EmpresaController@getEmpresasLogin')) }}
-                        {{ Form::select('slcEmpresa', $slcEmpresa, Input::old('slcEmpresa')) }}
+                        {{ Form::select('slcEmpresa', $slcEmpresa, Input::old('slcEmpresa'), array('id' => 'slcEmpresa'))}}
                     </p>
 
                     <p class="login-submit">
                         <button type="submit" class="login-button">Login</button>
                     </p>
                     <p class="forgot-password"><input type="checkbox" id="checkAdmin" name="checkAdmin" value="true" onclick="habilitar()">Administrador?</p>
-                    <p class="forgot-password"><a href="#">Esqueceu a senha?</a></p>
-                    {{ Form::close() }}
+                    <p class="forgot-password"><a href="/recuperarSenha">Esqueceu a senha?</a></p>
                 </form>
-                {{Session::get('msg')}}
             </div>
         </div>
     </body>
