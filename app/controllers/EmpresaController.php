@@ -3,8 +3,9 @@
 class EmpresaController extends BaseController {
 
     public function getEmpresasLogin() {
-        $slcEmpresa = DB::table('empresas')->lists('nm_empresa', 'id');
-        return View::make('login')->with('slcEmpresa', $slcEmpresa);
+        $consulta = Empresa::where('idStatus', '=', '1')->lists('nm_empresa', 'id');
+        $var = array('slcEmpresa' => $consulta);
+        return View::make('login', $var);
     }
     
     public static function getEmpresas(){
