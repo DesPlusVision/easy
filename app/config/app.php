@@ -123,7 +123,8 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
             
                 /* NOVAS */
-                'Thujohn\Pdf\PdfServiceProvider', /* PDF */
+                /*'Thujohn\Pdf\PdfServiceProvider', /* PDF */
+                'Barryvdh\DomPDF\ServiceProvider',
 
 	),
 
@@ -193,7 +194,8 @@ return array(
 		'View'              => 'Illuminate\Support\Facades\View',
             
                 /* NOVAS */
-                'PDF' => 'Thujohn\Pdf\PdfFacade', /* PDF */
+                /*'PDF' => 'Thujohn\Pdf\PdfFacade', /* PDF */
+                'PDF' => 'Barryvdh\DomPDF\Facade',
 
 	),
 

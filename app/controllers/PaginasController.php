@@ -20,4 +20,14 @@ class PaginasController extends BaseController{
         $this->layout->estado = EstadoController::getEstados();
         $this->layout->empresas = EmpresaController::getEmpresas();
     }
+    
+    public function AlterarEmpresas($id){
+        $this->layout->titulo = "Easy | Empresas";
+        $this->layout->pagina = "admin.alterar.empresa";        
+        $empresa = Empresa::find($id);
+        //$this->layout->estado = EstadoController::getEstados();
+        $this->layout->empresa = $empresa; 
+        $this->layout->estado = Estado::find($empresa->idEstado)->lists('estado','id');
+        
+    }
 }

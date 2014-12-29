@@ -44,9 +44,35 @@ class EmpresaController extends BaseController {
     }
     
     public function consultar($id){
-        
         $empresa = Empresa::find($id);
-        $vars = array('empresa' => $empresa);
-        return View::make('admin.consulta.empresa', $vars);
+        $estado = Estado::find($empresa->idEstado);
+        $vars = array('empresa' => $empresa, 'estado' => $estado);
+        $html = View::make('admin.consulta.empresa', $vars);
+        return PDF::loadHTML($html, 'A4', 'portrait')->stream('Consulta');
+    }
+    
+    public function alterar($id){
+        $empresa = Empresa::find($id);
+        $estado = Estado::find($empresa->idEstado);
+        $vars = array('empresa' => $empresa, 'estado' => $estado);
+        
+        return View::make('admin.alterar.empresa', $vars);        
+    }
+    
+    public function update(){
+        $empresa                = Empresa::find(Input::get('id'));
+        $empresa->nm_empresa    = Input::get('nm_empresa');
+        $empresa->cnpj          = Input::get('cnpj');
+        $empresa->endereco      = Input::get('endereco');
+        $empresa->bairro        = Input::get('bairro');
+        $empresa->cidade        = Input::get('cidade');
+        $empresa->idEstado      = Input::get('idEstado');
+        $empresa->contato       = Input::get('contato');
+        $empresa->fone          = Input::get('fone');
+        $empresa->dataPagamento = Input::get('dataPagamento');
+        $empresa->fone          = Input::get('fone');
+        $empresa->save();
+        
+        return Redirect::action('PaginasController@Empresas'); 
     }
 }

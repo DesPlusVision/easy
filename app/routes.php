@@ -18,13 +18,6 @@ Route::get('/admin/empresas/inativar', 'EmpresaController@inativar');
 Route::get('/admin/empresas/ativar', 'EmpresaController@ativar');
 Route::post('/admin/empresas', 'EmpresaController@create');
 
-Route::get('/admin/empresas/consultar{id}', 'EmpresaController@consultar');
-/*
-Route::get('/admin/empresas/consulta{id}', function()
-{
-    $html = '<html><body>'
-            . '<p>Put your html here, or generate it with your favourite '
-            . 'templating system.</p>'
-            . '</body></html>';
-    return PDF::load($html, 'A4', 'portrait')->show();
-});*/
+Route::get('/admin/empresas/consultar/{id}', 'EmpresaController@consultar');
+Route::get('/admin/empresas/alterar/{id}', 'PaginasController@AlterarEmpresas');
+Route::post('/admin/empresas/aletrar/{id}', 'EmpresaController@update');

@@ -56,8 +56,8 @@
                         <?php if ($empresa->dataPagamento < 10) { ?>0<?php } ?>{{$empresa->dataPagamento}}
                     </td>
                     <td width="18%">
-                        <a href="empresas/consultar?{{$empresa->id}}" title="Consultar">{{ HTML::image('img/consultar.png')}}</a>
-                        <a href="" title="Alterar">{{ HTML::image('img/ico_alterar.png')}}</a>
+                        <a href="empresas/consultar/{{$empresa->id}}" target="_black" title="Consultar">{{ HTML::image('img/consultar.png')}}</a>
+                        <a href="empresas/alterar/{{$empresa->id}}" title="Alterar">{{ HTML::image('img/ico_alterar.png')}}</a>
                         <?php if ($empresa->idStatus == 2) { ?>
                             <a href="empresas/ativar?id={{$empresa->id}}" title="Ativar">{{ HTML::image('img/ativar.png')}}</a>
                         <?php } else { ?>
