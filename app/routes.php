@@ -29,3 +29,12 @@ Route::post('/admin/usuarios', 'UsuarioController@create');
 Route::get('/admin/usuarios/consultar/{id}', 'UsuarioController@consultar');
 Route::get('/admin/usuarios/alterar/{id}', 'PaginasController@AlterarUsuarios');
 Route::post('/admin/usuarios/aletrar/{id}', 'UsuarioController@update');
+
+/*  Rotas Setor  */
+Route::get('/admin/setores', 'PaginasController@Setores');
+Route::get('/admin/setores/inativar', 'SetorController@inativar');
+Route::get('/admin/setores/ativar', 'SetorController@ativar');
+Route::post('/admin/setores', 'SetorController@create');
+Route::get('/admin/setores/consultar/{id}', 'SetorController@consultar');
+Route::get('/admin/setores/alterar/{id}', 'PaginasController@AlterarSetores');
+Route::post('/admin/setores/aletrar/{id}', 'SetorController@update');

@@ -37,17 +37,17 @@
                         <li class="topfirst"><a href="/admin" style="height:19px;line-height:19px; width: 120px; text-align: center;">{{ HTML::image('img/home.png') }}Início</a></li>
                         <li class="topmenu"><a style="height:19px;line-height:19px; width: 120px; text-align: center;">{{ HTML::image('img/256-1.png') }}Cadastros</span></a>
                             <ul>
-                                <li><a href="listarOcorrencia">{{ HTML::image('img/ocorrencia.png') }}Ocorrências</a></li>
-                                <li><a href="equipamentos">{{ HTML::image('img/samples.png') }}Equipamentos</a></li>
-                                <li><a href="setores">{{ HTML::image('img/setores.png') }}Setores</a></li>
-                                <li><a href="usuarios">{{ HTML::image('img/service.png') }}Usuários</a></li>
+                                <li><a href="/admin/listarOcorrencia">{{ HTML::image('img/ocorrencia.png') }}Ocorrências</a></li>
+                                <li><a href="/admin/equipamentos">{{ HTML::image('img/samples.png') }}Equipamentos</a></li>
+                                <li><a href="/admin/setores">{{ HTML::image('img/setores.png') }}Setores</a></li>
+                                <li><a href="/admin/usuarios">{{ HTML::image('img/service.png') }}Usuários</a></li>
                                 <li><a href="/admin/empresas">{{ HTML::image('img/mgar.png') }}Empresas</a></li>
                             </ul></li>
                         <li class="topmenu"><a href="#" style="height:19px;line-height:19px; width: 120px; text-align: center;">{{ HTML::image('img/table2.png') }}Tabelas</a></li>
                         <li class="topmenu"><a href="#" style="height:19px;line-height:19px; width: 120px; text-align: center;">{{ HTML::image('img/find.png') }}Relatório</a></li>
                         <li class="topmenu"><a href="" style="height:19px;line-height:19px; width: 120px; text-align: center;">{{ HTML::image('img/bfavour.png') }}Utilitário</a>
                             <ul>
-                                <li><a href="lancarPagamento">{{ HTML::image('img/register.png') }}Lançar Pagamento</a></li>
+                                <li><a href="/admin/lancarPagamento">{{ HTML::image('img/register.png') }}Lançar Pagamento</a></li>
                                 <li><a href="alterarSenha">{{ HTML::image('img/register.png') }}Troca Senha</a></li>
                             </ul>
                         </li>

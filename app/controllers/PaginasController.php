@@ -57,4 +57,18 @@ class PaginasController extends BaseController{
         $this->layout->estado = Estado::find($empresa->idEstado)->lists('estado','id');
         
     }
+    
+    /************************************************************************************************/
+    /*  Metodos Responsavel Para as Telas Cadastro/Alteração de Setores     
+     ************************************************************************************************/
+    public function Setores(){
+        $this->layout->titulo = "Easy | Setores";
+        $this->layout->pagina = "admin.cadastro.setores";
+    }
+    
+    public function AlterarSetores($id){
+        $this->layout->titulo = "Easy | Setores";
+        $this->layout->pagina = "admin.alterar.setores";
+        
+    }
 }
